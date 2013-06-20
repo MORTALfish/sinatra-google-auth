@@ -2,8 +2,8 @@
 require File.expand_path('../lib/sinatra/google-auth/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Chris Continanza"]
-  gem.email         = ["christopher.continanza@gmail.com"]
+  gem.authors       = ["Chris Continanza", "Alexander Rodin"]
+  gem.email         = ["christopher.continanza@gmail.com", "rodin.alexander@gmail.com"]
   gem.description   = %q{Drop-in google auth for sinatra apps}
   gem.summary       = %q{Helpers and routes for google open-id authentication for Sinatra.}
   gem.homepage      = ""
@@ -15,6 +15,6 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Sinatra::GoogleAuth::VERSION
 
-  gem.add_dependency 'omniauth-google-apps'
+  gem.add_dependency 'omniauth-google-oauth2'
   gem.add_dependency 'oa-openid'
 end
