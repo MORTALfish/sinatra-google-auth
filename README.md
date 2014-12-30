@@ -110,14 +110,16 @@ end
 
 ### Google Endpoint
 
-Configure your Google OpenID endpoint via setting the ENV var `GOOGLE_AUTH_DOMAIN`
+Configure your Google OpenID endpoint via setting the ENV var `GOOGLE_CLIENT_<ID|SECRET>` with key/secret from Google APIs console:
 
-    $ export GOOGLE_AUTH_DOMAIN=heroku.com
+    $ export GOOGLE_CLIENT_ID=<id>
+    $ export GOOGLE_CLIENT_SECRET=<secret>
 
 or before requiring
 
 ```ruby
-ENV['GOOGLE_AUTH_DOMAIN'] = 'heroku.com'
+ENV['GOOGLE_CLIENT_ID'] = '<id>'
+ENV['GOOGLE_CLIENT_SECRET'] = '<secret>'
 
 require 'sinatra'
 require 'sinatra/google-auth'
